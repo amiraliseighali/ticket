@@ -1,0 +1,24 @@
+<h1>Bug</h1>
+<p></p>
+<table class="listing" summary="Subject list">
+  <tr class="header">
+    <th>First Name</th>
+    <td><%= @bug.user.first_name %></td>
+  </tr>
+  <tr>
+    <th>Last Name</th>
+    <td><%= @bug.user.last_name %></td>
+  </tr>
+  <tr>
+    <th>location</th>
+    <td class="center"><%= @bug.location %></td>
+  </tr>
+  <tr>
+    <th>issue</th>
+    <td class="center"><%= @bug.issue %></td>
+  </tr>
+  <tr>
+    <th>Solved</th>
+    <td class="center"><%= @bug.solved ? 'Yes' : 'No' %></td>
+  </tr>
+  <%= link_to('Show all bugs', bugs_path) %>

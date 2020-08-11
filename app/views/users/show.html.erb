@@ -1,0 +1,16 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+<table class="listing" summary="Subject list">
+  <tr class="header">
+    <th>First Name</th>
+    <td><%= @user.first_name %></td>
+  </tr>
+  <tr>
+    <th>Last Name</th>
+    <td><%= @user.last_name %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td class="center"><%= @user.email %></td>
+  </tr>
+  <%= link_to('Show all users', users_path) %>

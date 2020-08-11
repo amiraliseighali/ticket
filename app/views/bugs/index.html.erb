@@ -1,0 +1,26 @@
+<h1> Bugs</h1>
+<p>List of all bugs</p>
+<table class="listing" summary="Subject list">
+  <tr class="header">
+    <th>User</th>
+    <th>Location</th>
+    <th>Issue</th>
+    <th>Solved</th>
+    <th>Action</th>
+
+  </tr>
+  <% @bugs.each do |bug| %>
+  <tr>
+    <td><%= bug.user.last_name %></td>
+    <td><%= bug.location %></td>
+    <td class="center"><%= bug.issue %></td>
+    <td><%= bug.solved ? 'Yes' : 'No' %></td>
+    <td class="actions">
+      <%= link_to("Show", bug_path(bug), :class => 'action show') %>
+      <%= link_to("Edit", edit_bug_path(bug), :class => 'action edit') %>
+      <%= link_to("Delete", delete_bug_path(bug), :class => 'action delete') %>
+    </td>
+  </tr>
+  <% end %>
+
+<%= link_to('add a new bug', new_bug_path)%>
